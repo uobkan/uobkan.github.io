@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Build A Portfolio Site | Udacity: Nak Bou</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	
+	<!-- jQuery library (served from Google) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<!-- responsive slider Javascript file -->
+    <script src="js/responsiveslides.min.js"></script>
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="header_inside">
+     	<div class="col-6">
+          <img class="header_logo" src="images/logo.png">   
+        </div>
+        <div class="col-6">
+          <h1 class="header_name">
+            Nak Bou 
+          </h1>
+          <h2 class="header_title">Designer & Front-End Developer</h2>  
+        </div>     
+      </div>
+    </header>
+
+    <main>
+      <section class="content">
+        <section class="hero">
+          
+          <ul class="rslides">
+            <picture>
+              <source media="(min-width:650px)" srcset="images/airport@750.jpg">
+              <source media="(max-width:650px)" srcset="images/airport@mobile.jpg">
+              <img src="images/airport.jpg" srcset="images/airport.jpg" >
+            </picture>
+            <picture>
+              <source media="(min-width:650px)" srcset="images/green@750.jpg">
+              <source media="(max-width:650px)" srcset="images/green@mobile.jpg">
+              <img src="images/green.jpg" srcset="images/green.jpg">
+            </picture>
+            <picture>
+              <source media="(min-width:650px)" srcset="images/blue@750.jpg">
+              <source media="(max-width:650px)" srcset="images/blue@mobile.jpg">
+              <img src="images/blue.jpg" srcset="images/blue.jpg">
+            </picture>
+            <picture>
+              <source media="(min-width:650px)" srcset="images/bubbles@750.jpg">
+              <source media="(max-width:650px)" srcset="images/bubbles@mobile.jpg">
+              <img src="images/bubbles.jpg" srcset="images/bubbles.jpg">
+            </picture>
+          </ul>  
+          
+        </section>
+      </section>
+
+      <section class="feature">
+        <span class="feature_title">Featured Work</span>
+        <ul class="feature_gallery">
+          <li class="feature_gallery_item">
+          	<img class="feature_gallery_image" src="images/blue.jpg" data-toggle="modal" data-target="#project1">
+          	<span>Blue</span>
+          	<span><a href="https://github.com/udacity/Appify/" target="_blank">Be informed</a></span>
+          </li>
+          <li class="feature_gallery_item">
+          	<img class="feature_gallery_image" src="images/bubbles.jpg">
+          	<span>Unravel</span>
+          	<span><a href="https://github.com/udacity/Appify/" target="_blank">Curious?</a></span>
+          </li>
+          <li class="feature_gallery_item">
+          	<img class="feature_gallery_image" src="images/green.jpg">
+          	<span>The Cove</span>
+          	<span><a href="https://github.com/udacity/Appify/" target="_blank">Want more?</a></span>
+          </li>
+        </ul>
+      </section>
+    </main> 
+
+      <!-- Modal -->
+		<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+		      </div>
+		      <div class="modal-body">
+		        <img class="feature_gallery_image" src="images/airport.jpg">
+		       
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	  <!-- End of Modal -->
+
+  </body>
+  <script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+  </script>
+ 
+</html>

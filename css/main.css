@@ -1,0 +1,357 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+header, section, div, footer {
+/* support Firefox, Webkit, Opera and IE8+ */
+  -moz-box-sizing: border-box; 
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; /* The width and height properties include the padding and border, but not the margin. */
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+*
+* Header
+*
+*/
+
+.header {
+  min-height: 85px;
+  border-bottom: 5px solid #BCBBBB;
+  margin-bottom: 15px;
+}
+
+.header_inside {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.header_logo {
+  height: 70px;
+  vertical-align: top;
+}
+
+.header_name {
+  font-weight: 100;
+  font-size: 35px;
+  text-align: right; 
+  text-transform: uppercase;
+  color: #747704;
+}
+
+.header_title {
+  font-weight: 100;
+  font-size: 16px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #747704;
+}
+
+/*
+*
+* Main
+*
+*/
+
+main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*
+*
+* Content
+*
+*/
+
+/*
+*
+* Hero
+*
+*/
+
+.hero {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  /*background-image: url("/Users/uobyttus/Desktop/p1/images/airport.jpg");
+  background-size: cover;*/
+}
+
+/*
+*
+* Featured Work
+*
+*/
+
+.feature {
+  flex-grow: 1; /* Allows this class to fill out entire window */
+  padding: 2em; 
+}
+
+.feature_title {
+  display: block;
+  font-weight: 300;
+  font-size: 24px;
+  color:#BCBBBB;
+}
+
+.feature_gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: justify; /* Works to evenly space the gallery items*/
+}
+
+/* This correctly evenly spaces the items by adding a full-width child element into the feature gallery */
+.feature_gallery:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.feature_gallery_item {
+  display: inline-block;
+  width:30%;
+  text-align: center;
+}
+
+.feature_gallery_image {
+  width: 100%;
+  margin: 10px 0;	
+}
+
+.feature_gallery_item span {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  color: #747704;
+}
+
+.feature_gallery_item span a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #BCBBBB;
+  vertical-align: top;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 300px;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  outline: 0;
+}
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+
+/*
+*
+* Columns | Grid Layout
+*
+*/
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;	
+}
+
+.col-5 {
+  width: 41.66%;	
+}
+
+.col-6 {
+  width: 50%;	
+}
+
+.col-7 {
+  width: 58.33%;	
+}
+
+.col-8 {
+  width: 66.66%;	
+}
+
+.col-9 {
+  width: 75%;	
+}
+
+.col-10 {
+  width: 83.33%;	
+}
+
+.col-11 {
+  width: 91.66%;	
+}
+
+.col-12 {
+  width: 100%;	
+}
